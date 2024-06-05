@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+:root {
+    /* Colores */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --bright-blue-active: hsl(245, 87%, 64%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    /* Tamaño de fuente */
+    --body-copy-size: 16px;
+
+    /* Fuente */
+    --red-hat-display: 'Red Hat Display', sans-serif;
+    --font-regular: 500;
+    --font-bold: 700;
+    --font-extra-bold: 900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: url(../images/pattern-background-desktop.svg), var(--pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: var(--red-hat-display);
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 35px 35px 0 hsla(245, 75%, 52%, .20);
+    overflow: hidden;
+    max-width: 27.5rem;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+.card__header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__body {
+    text-align: center;
+}
+
+.title {
+    font-size: 1.9rem;
+    padding-top: 1.7em;
+    padding-bottom: .7em;
+    font-family: var(--red-hat-display);
+    font-weight: bolder;
+    color: var(--dark-blue);
+}
+
+.text {
+    font-size: 1.05rem;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.plan-box {
+    margin: 0 3em 2em 3em;
+    padding: 1.5em;
+    display: flex;
+}
+
+.plan__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--very-pale-blue);
+    padding: 20px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.plan__box__left {
+    display: flex;
+    gap: 15px;
+}
+
+.card__footer {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    gap: 25px;
+}
+
+.pay {
+    padding: 15px 30px;
+    border: none;
+    background-color: var(--bright-blue);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 25px 25px 0 hsla(245, 75%, 52%, .25);
+}
+
+.cancel {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+p, button {
+    color: var(--desaturated-blue);
+}
+
+.plan__box__right {
+    text-decoration: underline;
+    color: var(--bright-blue);
+    font-weight: bold;
+}
+
+.pay:hover {
+    cursor: pointer;
+    background-color: var(--bright-blue-active);
+}
+
+.plan__box__right:hover {
+    cursor: pointer;
+    color: var(--bright-blue-active);
+}
+
+.cancel:hover {
+    cursor: pointer;
+    color: var(--dark-blue);
+}
+
+.details h3 {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background: url(../images/pattern-background-mobile.svg), var(--pale-blue);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
